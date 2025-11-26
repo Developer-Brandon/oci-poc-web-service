@@ -1,7 +1,17 @@
+@use "./color-variables";
+
 $gradient-primary: linear-gradient(
   135deg,
-  $primary-color 0%,
-  $primary-dark-color 100%
+  color-variables.$primary-color 0%,
+  color-variables.$primary-dark-color 100%
 );
-$gradient-success: linear-gradient(135deg, $success-color 0%, #1e8449 100%);
-$gradient-danger: linear-gradient(135deg, $danger-color 0%, #c0392b 100%);
+$gradient-success: linear-gradient(
+  135deg,
+  color-variables.$success-color 0%,
+  #1e8449 100%
+);
+$gradient-danger: linear-gradient(
+  135deg,
+  color-variables.$danger-color 0%,
+  #c0392b 100%
+);

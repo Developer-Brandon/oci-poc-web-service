@@ -441,8 +441,8 @@ onMounted(() => {
  * lang="scss": SCSS 문법 사용
  */
 
-@import "@/assets/styles/variables.scss";
-@import "@/assets/styles/animations.scss";
+@use "@/assets/styles/variables" as *;
+@use "@/assets/styles/animations" as *;
 
 /* ==================== 전체 페이지 ==================== */
 

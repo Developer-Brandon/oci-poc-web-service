@@ -157,8 +157,8 @@ defineEmits(["click"]);
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/styles/variables.scss";
-@import "@/assets/styles/animations.scss";
+@use "@/assets/styles/variables" as *;
+@use "@/assets/styles/animations" as *;
 
 /* ==================== 기본 버튼 스타일 ==================== */
 
