@@ -63,7 +63,6 @@
       @focus="isFocused = true"
       @blur="isFocused = false"
     />
-
     <!-- 우측 아이콘 슬롯 (비밀번호 토글, 검색 버튼 등) -->
     <div
       v-if="$slots.rightIcon || type === 'password'"

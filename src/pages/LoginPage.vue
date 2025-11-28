@@ -40,7 +40,6 @@
             </div>
             <!-- ========== 에러 메시지 (전체 폼) ========== -->
             <div v-if="error" class="form-error">
-              <span class="error-icon">⚠️</span>
               <span class="error-text">{{ error }}</span>
             </div>
             <!-- ========== 체크박스: 아이디 저장 ========== -->
@@ -261,7 +260,6 @@ async function handleLogin() {
       /**
        * 추후 라우터 설정 후:
        * router.push('/dashboard')
-       *
        * 현재는 alert로 확인
        */
       alert(`환영합니다, ${authStore.userName}님!`);
@@ -300,15 +298,6 @@ function handleSignup() {
 
 /* ==================== 라이프사이클 훅 ==================== */
 
-/**
- * onMounted: 컴포넌트가 DOM에 마운트될 때 실행
- *
- * Vue2:
- * mounted() { ... }
- *
- * Vue3:
- * onMounted(() => { ... })
- */
 onMounted(() => {
   // 저장된 이메일 로드
   authStore.loadSavedEmail();
@@ -447,7 +436,6 @@ onMounted(() => {
 .login-subtitle {
   /* 
     설명 텍스트
-    
     흐린 색상으로 보조 정보임을 표시
   */
   font-size: $font-size-sm;
@@ -483,14 +471,12 @@ onMounted(() => {
 }
 
 /* ==================== 버튼 ==================== */
-
 /* 
   Button 컴포넌트는 별도 스타일 파일에서 관리
   여기서는 버튼의 마진만 설정
 */
 
 /* ==================== 에러 메시지 (전체 폼) ==================== */
-
 .form-error {
   /* 
     전체 폼의 에러 메시지
@@ -514,11 +500,6 @@ onMounted(() => {
   animation: slideDown 0.3s ease-out;
 }
 
-.error-icon {
-  flex-shrink: 0;
-  font-size: 1.2rem;
-}
-
 .error-text {
   /* 에러 텍스트 */
 }
@@ -540,7 +521,6 @@ onMounted(() => {
 .login-footer {
   /* 
     "비밀번호 찾기 | 계정 생성"
-    
     중앙 정렬, 링크 스타일
   */
   display: flex;
@@ -557,7 +537,6 @@ onMounted(() => {
 .link-button {
   /* 
     링크 스타일 버튼
-    
     배경 없이 텍스트만 표시
   */
   background: none;
